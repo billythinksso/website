@@ -1,3 +1,37 @@
+/* 1. 引入 Google Fonts 顶级学术/文学衬线字体库 */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+/* 2. 覆盖默认字体与背景配色 */
+:root {
+  /* 优雅的米白/浅燕麦色背景，告别死白 */
+  --color-bg: #FAF8F5;
+  /* 暖炭灰文字，柔和不刺眼 */
+  --color-text-base: #242220;
+  --color-text-muted: #686461;
+  /* 边框细微质感 */
+  --color-border: rgba(36, 34, 32, 0.08);
+  
+  /* 字体族定义 */
+  --font-serif: "Newsreader", "Lora", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, sans-serif;
+}
+
+/* 将全局背景与正文字体应用到全站 */
+html {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-base) !important;
+  font-family: var(--font-body) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 所有大标题使用富有学术呼吸感的 Newsreader */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em;
+  color: #1A1816;
+}
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
